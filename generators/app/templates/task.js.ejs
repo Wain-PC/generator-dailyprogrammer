@@ -1,0 +1,15 @@
+const solve = (<%= inputVarName %>) => {
+
+  return <%= inputVarName %>;
+};
+
+<% if (bonuses) { %>
+  <% for (var i = 1; i <= bonuses;  i++ ) { %>
+const bonus<%= i %> = (<%- inputVarName %>) => {
+
+  return <%- inputVarName %>;
+};
+  <% } %>
+<% } %>
+
+module.exports = <% include export.ejs %>;

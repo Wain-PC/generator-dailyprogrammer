@@ -1,0 +1,18 @@
+const <% include export.ejs %> = require('./<%= task %>');
+
+describe('<%= task %>', () => {
+  const examples = [
+  <% unitTests.forEach(function(test) { %>
+    {
+      query: <%- test.query %>,
+      answer: <%- test.answer %>,
+    },
+  <% }); %>
+  ];
+
+  examples.forEach(({ query, answer }, i) => {
+    it(`should solve example ${i}`, () => {
+      expect(solve(query)).toEqual(answer);
+    });
+  });
+});

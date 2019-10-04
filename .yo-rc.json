@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Wain-PC",
+      "authorEmail": "wain-pc@mail.ru",
+      "authorUrl": "https://github.com:Wain-PC/generator-dailyprogrammer"
+    }
+  }
+}
